@@ -43,15 +43,14 @@
       border-radius: 8px;
       max-width: 900px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease-in-out;
       opacity: 0; /* hidden initially */
       transform: translateY(30px);
+      transition: all 0.8s ease-out;
     }
 
     section.visible {
       opacity: 1;
       transform: translateY(0);
-      transition: all 0.8s ease-out;
     }
 
     ul {
@@ -202,4 +201,20 @@
   </section>
 
   <footer>
-    <p>© 2026 Harishma N. P |
+    <p>© 2026 Harishma N. P | Portfolio</p>
+  </footer>
+
+  <!-- Animation Script -->
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const revealOnScroll = () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll
