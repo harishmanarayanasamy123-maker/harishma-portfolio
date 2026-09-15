@@ -11,6 +11,7 @@
       background-color: #f4f6f9;
       color: #333;
       line-height: 1.6;
+      scroll-behavior: smooth; /* enables smooth scrolling */
     }
 
     header {
@@ -40,6 +41,11 @@
       border-radius: 8px;
       max-width: 900px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    section:hover {
+      transform: scale(1.01); /* subtle zoom on hover */
     }
 
     ul {
@@ -51,9 +57,11 @@
       color: #0a84ff;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     a:hover {
+      color: #ff6600; /* orange hover effect */
       text-decoration: underline;
     }
 
@@ -67,9 +75,11 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
+      color: #ffcc00;
       text-decoration: underline;
     }
 
@@ -79,6 +89,27 @@
       margin-top: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05); /* zoom effect on images */
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #0a84ff;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #005bb5;
     }
 
     footer {
@@ -160,6 +191,9 @@
     <p>LinkedIn: <a href="https://linkedin.com/in/harishma-narayanasamy-7b54a228a">Profile</a></p>
     <p>GitHub: <a href="https://github.com/harishmanarayanasamy123-maker">Projects</a></p>
     <p>Phone: 9043691350</p>
+    <a href="mailto:harishmanarayanasamy123@gmail.com" class="button">Email Me</a>
+    <a href="https://linkedin.com/in/harishma-narayanasamy-7b54a228a" class="button">LinkedIn</a>
+    <a href="https://github.com/harishmanarayanasamy123-maker" class="button">GitHub</a>
   </section>
 
   <footer>
