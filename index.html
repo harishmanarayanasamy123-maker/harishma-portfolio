@@ -14,13 +14,49 @@
       color: #333;
       line-height: 1.6;
       scroll-behavior: smooth;
+      display: flex;
+    }
+
+    /* Sidebar navigation */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 220px;
+      background-color: #0a1f44;
+      padding-top: 30px;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.2);
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ffd700;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: #1c3b70;
+      color: #fff;
+    }
+
+    /* Main content area */
+    .main {
+      margin-left: 220px; /* space for sidebar */
+      flex: 1;
     }
 
     header {
       background: linear-gradient(135deg, #0a1f44, #1c3b70);
       color: white;
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
@@ -32,10 +68,10 @@
 
     h2 {
       color: #1c3b70;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
       font-size: 26px;
       margin-bottom: 15px;
+      border-bottom: 2px solid #ddd; /* section divider */
+      padding-bottom: 8px;
     }
 
     section {
@@ -61,24 +97,6 @@
 
     a:hover {
       color: #ff6600;
-      text-decoration: underline;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    nav a {
-      color: #ffd700;
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
       text-decoration: underline;
     }
 
@@ -121,82 +139,82 @@
     }
 
     @media (max-width: 768px) {
+      .sidebar {
+        width: 160px;
+      }
+      .main {
+        margin-left: 160px;
+      }
       h1 { font-size: 30px; }
       h2 { font-size: 22px; }
-      nav a { display: block; margin: 10px 0; }
       section { margin: 15px; padding: 20px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1><i class="fas fa-user-graduate"></i> Harishma N. P</h1>
-    <p>Electronics & Communication Engineer | Innovating with IoT, Embedded Systems, and Automation</p>
-    <nav>
-      <a href="#about">About</a> |
-      <a href="#internships">Internships</a> |
-      <a href="#projects">Projects</a> |
-      <a href="#skills">Skills</a> |
-      <a href="#achievements">Achievements</a> |
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <a href="#about"><i class="fas fa-id-card"></i> About</a>
+    <a href="#internships"><i class="fas fa-briefcase"></i> Internships</a>
+    <a href="#projects"><i class="fas fa-lightbulb"></i> Projects</a>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </nav>
 
-  <section id="about">
-    <h2><i class="fas fa-id-card"></i> About Me</h2>
-    <p>Final-year ECE student with hands-on experience in IoT, automation, and web development. Passionate about building real-time systems and sustainable solutions.</p>
-    <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Profile Photo">
-  </section>
+  <!-- Main content -->
+  <div class="main">
+    <header>
+      <h1><i class="fas fa-user-graduate"></i> Harishma N. P</h1>
+      <p>Electronics & Communication Engineer | Innovating with IoT, Embedded Systems, and Automation</p>
+    </header>
 
-  <section id="internships">
-    <h2><i class="fas fa-briefcase"></i> Internships</h2>
-    <ul>
-      <li>Lennox International – Automation Team (Python, AI Agents, Unit Testing)</li>
-      <li>Total Plant Engineering & Design – Buoy Server Monitoring Project (Web Development, REST APIs, Real-time dashboards)</li>
-      <li>SL Lumax – Automotive Lighting (Quality inspection, Safety standards)</li>
-    </ul>
-    <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Internship Work">
-  </section>
+    <section id="about">
+      <h2><i class="fas fa-id-card"></i> About Me</h2>
+      <p>Final-year ECE student with hands-on experience in IoT, automation, and web development. Passionate about building real-time systems and sustainable solutions.</p>
+      <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Profile Photo">
+    </section>
 
-  <section id="projects">
-    <h2><i class="fas fa-lightbulb"></i> Projects</h2>
-    <ul>
-      <li>Buoy Server Monitoring – Real-time dashboards, REST APIs</li>
-      <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Buoy Monitoring Dashboard">
-      <li>Blind Spot Detection System – Radar + NodeMCU</li>
-      <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Blind Spot Detection">
-      <li>IoT Water Quality Monitoring – ESP32 + MQTT</li>
-      <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Water Quality Monitoring">
-      <li>Renewable-Powered Automated Flush – Arduino + Sensors</li>
-      <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Automated Flush System">
-    </ul>
-  </section>
+    <section id="internships">
+      <h2><i class="fas fa-briefcase"></i> Internships</h2>
+      <ul>
+        <li>Lennox International – Automation Team (Python, AI Agents, Unit Testing)</li>
+        <li>Total Plant Engineering & Design – Buoy Server Monitoring Project (Web Development, REST APIs, Real-time dashboards)</li>
+        <li>SL Lumax – Automotive Lighting (Quality inspection, Safety standards)</li>
+      </ul>
+      <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Internship Work">
+    </section>
 
-  <section id="skills">
-    <h2><i class="fas fa-cogs"></i> Skills</h2>
-    <p>Python, C, C++, ESP32, NodeMCU, Arduino, MATLAB, Xilinx, MicroWind, Embedded Systems, IoT, Automation</p>
-    <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Skills Icons">
-  </section>
+    <section id="projects">
+      <h2><i class="fas fa-lightbulb"></i> Projects</h2>
+      <ul>
+        <li>Buoy Server Monitoring – Real-time dashboards, REST APIs</li>
+        <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Buoy Monitoring Dashboard">
+        <li>Blind Spot Detection System – Radar + NodeMCU</li>
+        <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Blind Spot Detection">
+        <li>IoT Water Quality Monitoring – ESP32 + MQTT</li>
+        <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Water Quality Monitoring">
+        <li>Renewable-Powered Automated Flush – Arduino + Sensors</li>
+        <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Automated Flush System">
+      </ul>
+    </section>
 
-  <section id="achievements">
-    <h2><i class="fas fa-trophy"></i> Achievements</h2>
-    <p>Winner – Tech Escape Room, RJ Hunt, Balloon Debate | Miss Inspiration 2024 | IEEE WIE Chair</p>
-    <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Achievements">
-  </section>
+    <section id="skills">
+      <h2><i class="fas fa-cogs"></i> Skills</h2>
+      <p>Python, C, C++, ESP32, NodeMCU, Arduino, MATLAB, Xilinx, MicroWind, Embedded Systems, IoT, Automation</p>
+      <img src="WhatsApp Image 2026-09-15 at 9.03.15 PM.png" alt="Skills Icons">
+    </section>
 
-  <section id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact</h2>
-    <p>Email: harishmanarayanasamy123@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/harishma-narayanasamy-7b54a228a">Profile</a></p>
-    <p>GitHub: <a href="https://github.com/harishmanarayanasamy123-maker">Projects</a></p>
-    <p>Phone: 9043691350</p>
-    <a href="mailto:harishmanarayanasamy123@gmail.com" class="button">Email Me</a>
-    <a href="https://linkedin.com/in/harishma-narayanasamy-7b54a228a" class="button">LinkedIn</a>
-    <a href="https://github.com/harishmanarayanasamy123-maker" class="button">GitHub</a>
-  </section>
+    <section id="achievements">
+      <h2><i class="fas fa-trophy"></i> Achievements</h2>
+      <p>Winner – Tech Escape Room, RJ Hunt, Balloon Debate | Miss Inspiration 2024 | IEEE WIE Chair</p>
+      <img src="WhatsApp Image 2026-09-15 at 9.03.16 PM.png" alt="Achievements">
+    </section>
 
-  <footer>
-    <p>© 2026 Harishma N. P | Portfolio</p>
-  </footer>
-</body>
-</html>
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <p>Email: harishmanarayanasamy123@gmail.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/harishma-narayanasamy-7b54a228a">Profile</a></p>
+      <p>GitHub: <a href="https://github.com/harishmanarayanasamy123-maker">Projects</a></p>
+      <p>Phone: 9043691350</p>
+      <a href="mailto:har
