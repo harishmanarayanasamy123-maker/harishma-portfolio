@@ -5,35 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: 'Open Sans', Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fdfdfd;
+      background-color: #f4f6f9;
+      color: #333;
       line-height: 1.6;
     }
 
     header {
-      background-color: #0a1f44;
+      background: linear-gradient(135deg, #0a1f44, #1c3b70);
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 40px;
+      font-weight: bold;
     }
 
     h2 {
-      color: #0a1f44;
-      border-bottom: 2px solid #e0e0e0;
+      color: #1c3b70;
+      border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
-      font-size: 22px;
+      font-size: 24px;
     }
 
     section {
-      padding: 15px 20px;
-      margin-bottom: 20px;
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     ul {
@@ -44,6 +50,7 @@
     a {
       color: #0a84ff;
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
@@ -51,15 +58,15 @@
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     nav a {
       color: #ffd700; /* gold accent */
-      margin: 0 8px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     nav a:hover {
@@ -71,23 +78,23 @@
       height: auto;
       margin-top: 10px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 6px;
     }
 
     footer {
       background-color: #0a1f44;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       font-size: 14px;
     }
 
     /* Responsive rules */
     @media (max-width: 768px) {
-      h1 { font-size: 24px; }
+      h1 { font-size: 28px; }
       h2 { font-size: 20px; }
-      nav a { display: block; margin: 5px 0; }
-      section { padding: 10px; }
+      nav a { display: block; margin: 8px 0; }
+      section { margin: 10px; padding: 15px; }
     }
   </style>
 </head>
